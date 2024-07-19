@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfv3y62xgdjw0"]
+
+[ext_resource type="Texture2D" uid="uid://bl240okc5nwig" path="res://Nanica_3DX_Home_Screen_(KevFR's_remade).png" id="1_akhef"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wylxy"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+offset_top = 240.0
+offset_right = 40.0
+offset_bottom = 480.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wylxy")
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 2
+offset_left = 360.0
+offset_top = 240.0
+offset_right = 400.0
+offset_bottom = 480.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wylxy")
+
+[node name="Nanica3dxHomeScreen(kevFr\'sRemade)" type="Sprite2D" parent="."]
+position = Vector2(716, 242)
+texture = ExtResource("1_akhef")
