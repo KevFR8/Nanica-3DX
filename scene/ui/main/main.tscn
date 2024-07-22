@@ -1,21 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cfv3y62xgdjw0"]
+[gd_scene load_steps=2 format=3 uid="uid://cfv3y62xgdjw0"]
 
-[ext_resource type="Texture2D" uid="uid://pdomkga7tg3q" path="res://asset/texture/bg/main/bottom_home_menu_bg.png" id="1_ngllu"]
-[ext_resource type="VideoStream" path="res://asset/texture/bg/main/top_home_bg.ogg.ogv" id="3_mcyic"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gd3su"]
-bg_color = Color(1, 1, 1, 1)
-border_color = Color(1, 1, 1, 1)
-border_blend = true
-corner_radius_top_left = 10
-corner_radius_bottom_left = 10
-corner_detail = 20
-shadow_color = Color(0, 0, 0, 0.121569)
-shadow_size = 2
-shadow_offset = Vector2(1, 5.655)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wylxy"]
-bg_color = Color(0, 0, 0, 1)
+[ext_resource type="VideoStream" path="res://asset/texture/bg/main/layout/top/top_home_bg.ogg.ogv" id="3_mcyic"]
 
 [node name="main" type="Control"]
 layout_mode = 3
@@ -25,36 +10,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Top" type="VideoStreamPlayer" parent="."]
-layout_mode = 0
+[node name="Top" type="CanvasLayer" parent="."]
+
+[node name="Top" type="VideoStreamPlayer" parent="Top"]
 offset_right = 400.0
 offset_bottom = 240.0
 stream = ExtResource("3_mcyic")
 autoplay = true
 loop = true
-
-[node name="Bottom" type="Sprite2D" parent="."]
-position = Vector2(200, 360)
-texture = ExtResource("1_ngllu")
-
-[node name="Panel" type="Panel" parent="."]
-offset_left = 155.0
-offset_top = 317.0
-offset_right = 400.0
-offset_bottom = 411.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_gd3su")
-
-[node name="ScreenBorderLeft" type="Panel" parent="."]
-layout_mode = 2
-offset_top = 240.0
-offset_right = 40.0
-offset_bottom = 480.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_wylxy")
-
-[node name="ScreenBorderRight" type="Panel" parent="."]
-layout_mode = 2
-offset_left = 360.0
-offset_top = 240.0
-offset_right = 400.0
-offset_bottom = 480.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_wylxy")

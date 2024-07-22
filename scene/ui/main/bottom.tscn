@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://i4ubkxstvme3"]
+
+[ext_resource type="Script" path="res://scripts/scenes/main/bottom/bottom.gd" id="1_mo284"]
+[ext_resource type="Texture2D" uid="uid://dgmne62ddvakd" path="res://asset/texture/bg/main/layout/bottom/1.png" id="2_niwy0"]
+[ext_resource type="Texture2D" uid="uid://dqtvqrs7rhx5v" path="res://asset/texture/bg/main/layout/bottom/2.png" id="3_entlu"]
+[ext_resource type="Texture2D" uid="uid://7ojcw25yn7bd" path="res://asset/texture/bg/main/layout/bottom/3.png" id="4_xvv57"]
+[ext_resource type="Texture2D" uid="uid://pdomkga7tg3q" path="res://asset/texture/bg/main/layout/bottom/bottom_home_menu_bg.png" id="5_7n1hg"]
+
+[node name="Bottom" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_mo284")
+
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(201, 360)
+texture = ExtResource("5_7n1hg")
+
+[node name="B2" type="TouchScreenButton" parent="."]
+position = Vector2(322, 322)
+scale = Vector2(1.77519, 1)
+texture_normal = ExtResource("3_entlu")
+
+[node name="B3" type="TouchScreenButton" parent="."]
+position = Vector2(780, 323)
+texture_normal = ExtResource("4_xvv57")
+
+[node name="B1" type="TouchScreenButton" parent="."]
+position = Vector2(64, 322)
+texture_normal = ExtResource("2_niwy0")
+action = "press"
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
