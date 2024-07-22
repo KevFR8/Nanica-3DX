@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfv3y62xgdjw0"]
+[gd_scene load_steps=4 format=3 uid="uid://cfv3y62xgdjw0"]
 
+[ext_resource type="PackedScene" uid="uid://i4ubkxstvme3" path="res://scene/ui/main/bottom.tscn" id="2_pwvht"]
 [ext_resource type="VideoStream" path="res://asset/texture/bg/main/layout/top/top_home_bg.ogg.ogv" id="3_mcyic"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_22ma0"]
+bg_color = Color(0, 0, 0, 1)
 
 [node name="main" type="Control"]
 layout_mode = 3
@@ -18,3 +22,20 @@ offset_bottom = 240.0
 stream = ExtResource("3_mcyic")
 autoplay = true
 loop = true
+
+[node name="Bottom" parent="." instance=ExtResource("2_pwvht")]
+
+[node name="ScreenBorder" type="Panel" parent="."]
+layout_mode = 0
+offset_top = 239.0
+offset_right = 41.0
+offset_bottom = 480.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_22ma0")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 361.0
+offset_top = 239.0
+offset_right = 400.0
+offset_bottom = 480.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_22ma0")
