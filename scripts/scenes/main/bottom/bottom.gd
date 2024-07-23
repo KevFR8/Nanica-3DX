@@ -1,9 +1,5 @@
 extends Control
 
-@onready var touch_b1 = $Bottom/border/TouchScreenButton/B1
-@onready var touch_b2 = $Bottom/border/TouchScreenButton/B1/B2
-@onready var touch_b3 = $Bottom/border/TouchScreenButton/B1/B3
-
 var length = 100
 var startPos : Vector2
 var curPos : Vector2
