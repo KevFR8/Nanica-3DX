@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cfv3y62xgdjw0"]
+[gd_scene load_steps=5 format=3 uid="uid://cfv3y62xgdjw0"]
 
 [ext_resource type="PackedScene" uid="uid://i4ubkxstvme3" path="res://scene/ui/main/bottom.tscn" id="2_pwvht"]
 [ext_resource type="VideoStream" path="res://asset/texture/bg/main/layout/top/top_home_bg.ogg.ogv" id="3_mcyic"]
 [ext_resource type="PackedScene" uid="uid://ih0fx54e1f4f" path="res://scripts/scenes/layout/screen_border.tscn" id="3_tjjqg"]
+[ext_resource type="PackedScene" uid="uid://dhkcmvtirw0mf" path="res://scene/ui/popup/dialogbox/dialogbox.tscn" id="4_s6ned"]
 
 [node name="main" type="Control"]
 layout_mode = 3
@@ -24,4 +25,8 @@ loop = true
 [node name="Bottom" parent="." instance=ExtResource("2_pwvht")]
 
 [node name="ScreenBorder" parent="." instance=ExtResource("3_tjjqg")]
+layout_mode = 1
+
+[node name="Dialogbox" parent="." instance=ExtResource("4_s6ned")]
+visible = false
 layout_mode = 1

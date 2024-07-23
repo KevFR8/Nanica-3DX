@@ -1,0 +1,92 @@
+[gd_scene load_steps=6 format=3 uid="uid://dhkcmvtirw0mf"]
+
+[ext_resource type="Texture2D" uid="uid://bt70q5glsa036" path="res://asset/texture/ui/popup/popup1.png" id="1_fm6es"]
+
+[sub_resource type="Animation" id="Animation_xmbpu"]
+resource_name = "fade_effect"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(0.5, 2),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.501961)]
+}
+
+[sub_resource type="Animation" id="Animation_7hbde"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.294118)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_qrrn3"]
+resource_name = "popup"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(-2, 2),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r5lnr"]
+_data = {
+"RESET": SubResource("Animation_7hbde"),
+"fade_effect": SubResource("Animation_xmbpu"),
+"popup": SubResource("Animation_qrrn3")
+}
+
+[node name="Dialogbox" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_top = 238.0
+offset_right = 400.0
+offset_bottom = 480.0
+color = Color(0, 0, 0, 0.294118)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(203, 358)
+texture = ExtResource("1_fm6es")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_r5lnr")
+}
+autoplay = "popup"
