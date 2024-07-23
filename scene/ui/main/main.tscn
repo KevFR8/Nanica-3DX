@@ -2,9 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://i4ubkxstvme3" path="res://scene/ui/main/bottom.tscn" id="2_pwvht"]
 [ext_resource type="VideoStream" path="res://asset/texture/bg/main/layout/top/top_home_bg.ogg.ogv" id="3_mcyic"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_22ma0"]
-bg_color = Color(0, 0, 0, 1)
+[ext_resource type="PackedScene" uid="uid://ih0fx54e1f4f" path="res://scripts/scenes/layout/screen_border.tscn" id="3_tjjqg"]
 
 [node name="main" type="Control"]
 layout_mode = 3
@@ -25,17 +23,5 @@ loop = true
 
 [node name="Bottom" parent="." instance=ExtResource("2_pwvht")]
 
-[node name="ScreenBorder" type="Panel" parent="."]
-layout_mode = 0
-offset_top = 239.0
-offset_right = 41.0
-offset_bottom = 480.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_22ma0")
-
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 0
-offset_left = 361.0
-offset_top = 239.0
-offset_right = 400.0
-offset_bottom = 480.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_22ma0")
+[node name="ScreenBorder" parent="." instance=ExtResource("3_tjjqg")]
+layout_mode = 1

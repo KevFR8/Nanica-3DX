@@ -1,0 +1,77 @@
+[gd_scene load_steps=8 format=3 uid="uid://cs0xgd00vw86a"]
+
+[ext_resource type="Texture2D" uid="uid://bdwr88vaeyg82" path="res://asset/texture/bg/settings/top_screen/top.png" id="1_hxk1r"]
+[ext_resource type="Script" path="res://scripts/scenes/settings/main/SettingsMenu.gd" id="1_r36ku"]
+[ext_resource type="Texture2D" uid="uid://ba5bskfbe5kw1" path="res://asset/texture/bg/settings/bottom_screen/bottom_screen.png" id="2_ycfs1"]
+[ext_resource type="PackedScene" uid="uid://ih0fx54e1f4f" path="res://scripts/scenes/layout/screen_border.tscn" id="3_buy1l"]
+[ext_resource type="Theme" uid="uid://cpg072mka826" path="res://themes/ui/main/fonts/menu.tres" id="4_iaaif"]
+[ext_resource type="Texture2D" uid="uid://07awb2wvvmbv" path="res://asset/texture/ui/footer/exit/exit_button.png" id="5_emtvt"]
+[ext_resource type="Texture2D" uid="uid://cp83ue86hjpcg" path="res://asset/texture/ui/footer/exit/nanicaid_button.png" id="6_ddve8"]
+
+[node name="SettingsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r36ku")
+
+[node name="TopScreen" type="Sprite2D" parent="."]
+position = Vector2(200, 119.5)
+scale = Vector2(1, 0.983539)
+texture = ExtResource("1_hxk1r")
+
+[node name="BottomScreen" type="Sprite2D" parent="."]
+position = Vector2(201, 359.5)
+scale = Vector2(1, 1.00417)
+texture = ExtResource("2_ycfs1")
+
+[node name="ScreenBorder" parent="." instance=ExtResource("3_buy1l")]
+layout_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 195.0
+offset_right = 383.0
+offset_bottom = 218.0
+theme = ExtResource("4_iaaif")
+theme_override_colors/font_color = Color(0.564706, 0.564706, 0.564706, 1)
+text = "Version 1.15"
+
+[node name="ExitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 434.0
+offset_right = 361.0
+offset_bottom = 484.0
+icon = ExtResource("5_emtvt")
+flat = true
+
+[node name="ExitButtonText" type="Button" parent="."]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 454.0
+offset_right = 290.0
+offset_bottom = 485.0
+theme = ExtResource("4_iaaif")
+text = "Exit"
+flat = true
+
+[node name="NanicaIDButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -164.0
+offset_top = -5.0
+offset_right = 164.0
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("6_ddve8")
+flat = true

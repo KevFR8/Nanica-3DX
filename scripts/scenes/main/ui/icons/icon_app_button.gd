@@ -10,5 +10,5 @@ func _physics_process(delta):
 		anim.play("inactive")
 
 
-
-
+func _on_button_pressed():
+	get_tree().change_scene_to_file("res://scene/main/settings/SettingsMenu.tscn")

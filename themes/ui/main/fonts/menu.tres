@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cpg072mka826"]
+
+[ext_resource type="FontFile" uid="uid://efndw2b4hvl6" path="res://fonts/selawk.ttf" id="1_3rku4"]
+
+[resource]
+Label/fonts/font = ExtResource("1_3rku4")
