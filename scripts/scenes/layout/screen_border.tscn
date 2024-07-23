@@ -12,12 +12,14 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ScreenBorder" type="Panel" parent="."]
+layout_mode = 0
 offset_top = 239.0
 offset_right = 41.0
 offset_bottom = 480.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_1chdb")
 
 [node name="ScreenBorser2" type="Panel" parent="."]
+layout_mode = 0
 offset_left = 361.0
 offset_top = 239.0
 offset_right = 400.0
