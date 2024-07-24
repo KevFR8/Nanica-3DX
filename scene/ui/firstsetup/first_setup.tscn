@@ -1,9 +1,9 @@
 [gd_scene load_steps=32 format=3 uid="uid://c4ot46qb4uwlk"]
 
-[ext_resource type="Texture2D" uid="uid://8q02l4vsllje" path="res://asset/texture/bg/firstsetup/progressbar/empty_bar.png" id="1_wxp5n"]
 [ext_resource type="Script" path="res://scripts/scenes/setup/first_setup.gd" id="1_yoa3f"]
 [ext_resource type="Texture2D" uid="uid://dtg821hklra2e" path="res://asset/texture/ui/popup/firstsetup_popup.png" id="2_bmq5b"]
 [ext_resource type="FontFile" uid="uid://efndw2b4hvl6" path="res://fonts/selawk.ttf" id="3_spcqs"]
+[ext_resource type="PackedScene" uid="uid://cs0u3k7mx0yb8" path="res://scene/ui/ProgressbarSetup/setup_pb.tscn" id="5_nfvy7"]
 [ext_resource type="Texture2D" uid="uid://b3efa0ha0lywu" path="res://asset/texture/ui/loading/loading_1.png" id="5_xkqnh"]
 
 [sub_resource type="Theme" id="Theme_ei36u"]
@@ -196,14 +196,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yoa3f")
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
-layout_mode = 0
-offset_left = 84.0
-offset_top = 387.0
-offset_right = 316.0
-offset_bottom = 414.0
-metadata/_edit_lock_ = true
-
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
 offset_right = 400.0
@@ -216,11 +208,6 @@ position = Vector2(198, 352)
 scale = Vector2(1.3, 1.3)
 texture = ExtResource("2_bmq5b")
 metadata/_edit_lock_ = true
-
-[node name="EmptyBar" type="Sprite2D" parent="."]
-position = Vector2(201, 400.5)
-scale = Vector2(0.805281, 1.14815)
-texture = ExtResource("1_wxp5n")
 
 [node name="WelcomeText" type="RichTextLabel" parent="."]
 layout_mode = 0
@@ -270,5 +257,8 @@ sprite_frames = SubResource("SpriteFrames_1qa8i")
 autoplay = "default"
 frame = 3
 centered = false
+
+[node name="SetupPB" parent="." instance=ExtResource("5_nfvy7")]
+layout_mode = 1
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
