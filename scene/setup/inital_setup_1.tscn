@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://dshneov31t3oy"]
+
+[ext_resource type="Texture2D" uid="uid://bdwr88vaeyg82" path="res://asset/texture/bg/settings/top_screen/top.png" id="1_37vqw"]
+[ext_resource type="Script" path="res://scripts/scenes/setup/config/inital_setup_1.gd" id="1_kpq7a"]
+[ext_resource type="PackedScene" uid="uid://ih0fx54e1f4f" path="res://scripts/scenes/layout/screen_border.tscn" id="2_ls1hx"]
+[ext_resource type="Texture2D" uid="uid://07awb2wvvmbv" path="res://asset/texture/ui/footer/exit/exit_button.png" id="3_bja5k"]
+[ext_resource type="Theme" uid="uid://cpg072mka826" path="res://themes/ui/main/fonts/menu.tres" id="5_kgyd6"]
+
+[sub_resource type="Theme" id="Theme_slw6y"]
+
+[node name="InitalSetup1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kpq7a")
+
+[node name="TopScreen" type="Sprite2D" parent="."]
+position = Vector2(200, 119.5)
+scale = Vector2(1, 0.983539)
+texture = ExtResource("1_37vqw")
+
+[node name="ScreenBorder" parent="." instance=ExtResource("2_ls1hx")]
+layout_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 239.0
+offset_right = 361.0
+offset_bottom = 480.0
+color = Color(1, 0.909804, 0.729412, 1)
+
+[node name="ExitButton" type="Button" parent="."]
+offset_left = 33.0
+offset_top = 434.0
+offset_right = 361.0
+offset_bottom = 484.0
+theme = SubResource("Theme_slw6y")
+icon = ExtResource("3_bja5k")
+flat = true
+
+[node name="ExitButtonText" type="Button" parent="."]
+offset_left = 98.0
+offset_top = 454.0
+offset_right = 290.0
+offset_bottom = 485.0
+theme = ExtResource("5_kgyd6")
+text = "OK"
+flat = true
+
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="ExitButtonText" to="." method="_on_exit_button_text_pressed"]
