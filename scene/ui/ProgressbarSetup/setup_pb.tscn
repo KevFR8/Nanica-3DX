@@ -14,10 +14,10 @@ tracks/0/path = NodePath("LoadingBar:value")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 4, 6.6),
-"transitions": PackedFloat32Array(2, 1, 2),
+"times": PackedFloat32Array(0, 4, 7, 7.1),
+"transitions": PackedFloat32Array(2, 1, 2, 0),
 "update": 0,
-"values": [0.0, 100.0, 0.0]
+"values": [0.0, 100.0, 0.0, 100.0]
 }
 
 [sub_resource type="Animation" id="Animation_hx7iu"]
