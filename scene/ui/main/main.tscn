@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cfv3y62xgdjw0"]
+[gd_scene load_steps=7 format=3 uid="uid://cfv3y62xgdjw0"]
 
 [ext_resource type="PackedScene" uid="uid://dfrjfgwy0dyhc" path="res://asset/fx/transition/fade/transition_screen.tscn" id="1_sipsq"]
 [ext_resource type="PackedScene" uid="uid://i4ubkxstvme3" path="res://scene/ui/main/bottom.tscn" id="2_pwvht"]
 [ext_resource type="VideoStream" path="res://asset/texture/bg/main/layout/top/top_home_bg.ogg.ogv" id="3_mcyic"]
 [ext_resource type="PackedScene" uid="uid://ih0fx54e1f4f" path="res://scripts/scenes/layout/screen_border.tscn" id="3_tjjqg"]
 [ext_resource type="PackedScene" uid="uid://dhkcmvtirw0mf" path="res://scene/ui/popup/dialogbox/dialogbox.tscn" id="4_s6ned"]
+[ext_resource type="PackedScene" uid="uid://doakx2wyg7qql" path="res://scene/ui/icon/settings_app_button.tscn" id="6_q0ti3"]
 
 [node name="main" type="Control"]
 layout_mode = 3
@@ -15,6 +16,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="transition_screen" parent="." instance=ExtResource("1_sipsq")]
+visible = false
 
 [node name="Top" type="CanvasLayer" parent="."]
 
@@ -33,3 +35,9 @@ layout_mode = 1
 [node name="Dialogbox" parent="." instance=ExtResource("4_s6ned")]
 visible = false
 layout_mode = 1
+
+[node name="SettingsAppButton" parent="." instance=ExtResource("6_q0ti3")]
+offset_left = 254.0
+offset_top = 381.0
+offset_right = 254.0
+offset_bottom = 381.0

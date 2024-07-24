@@ -13,6 +13,7 @@ config_version=5
 config/name="Nanica 3DX"
 run/main_scene="res://scene/ui/main/main.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
+boot_splash/bg_color=Color(0.223529, 0.223529, 0.223529, 1)
 config/icon="res://icon.svg"
 
 [autoload]
@@ -48,7 +49,3 @@ right={
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
-
-[rendering]
-
-textures/canvas_textures/default_texture_filter=0

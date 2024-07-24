@@ -6,7 +6,7 @@
 
 [sub_resource type="Animation" id="Animation_bcgb0"]
 resource_name = "full_bar"
-length = 8.0
+length = 7.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -14,8 +14,8 @@ tracks/0/path = NodePath("LoadingBar:value")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 4, 7, 7.1),
-"transitions": PackedFloat32Array(2, 1, 2, 0),
+"times": PackedFloat32Array(0, 3, 7, 7.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [0.0, 100.0, 0.0, 100.0]
 }
