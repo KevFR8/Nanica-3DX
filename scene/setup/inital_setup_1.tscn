@@ -1,12 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://dshneov31t3oy"]
+[gd_scene load_steps=9 format=3 uid="uid://dshneov31t3oy"]
 
 [ext_resource type="Texture2D" uid="uid://bdwr88vaeyg82" path="res://asset/texture/bg/settings/top_screen/top.png" id="1_37vqw"]
 [ext_resource type="Script" path="res://scripts/scenes/setup/config/inital_setup_1.gd" id="1_kpq7a"]
 [ext_resource type="PackedScene" uid="uid://ih0fx54e1f4f" path="res://scripts/scenes/layout/screen_border.tscn" id="2_ls1hx"]
 [ext_resource type="Texture2D" uid="uid://07awb2wvvmbv" path="res://asset/texture/ui/footer/exit/exit_button.png" id="3_bja5k"]
+[ext_resource type="Theme" uid="uid://cpgmsm8h8rn4u" path="res://themes/ui/main/fonts/menu_bold.tres" id="5_f2dam"]
 [ext_resource type="Theme" uid="uid://cpg072mka826" path="res://themes/ui/main/fonts/menu.tres" id="5_kgyd6"]
-
-[sub_resource type="Theme" id="Theme_slw6y"]
+[ext_resource type="Texture2D" uid="uid://xs1hr7jhhbng" path="res://asset/texture/ui/footer/exit/exit_button_pressed.png" id="6_21l0c"]
+[ext_resource type="Texture2D" uid="uid://d0cb67ywpfgkd" path="res://asset/texture/logo/nanica3DX/large_logo.png" id="8_cxehu"]
 
 [node name="InitalSetup1" type="Control"]
 layout_mode = 3
@@ -16,11 +17,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kpq7a")
-
-[node name="TopScreen" type="Sprite2D" parent="."]
-position = Vector2(200, 119.5)
-scale = Vector2(1, 0.983539)
-texture = ExtResource("1_37vqw")
 
 [node name="ScreenBorder" parent="." instance=ExtResource("2_ls1hx")]
 layout_mode = 1
@@ -33,23 +29,58 @@ offset_right = 361.0
 offset_bottom = 480.0
 color = Color(1, 0.909804, 0.729412, 1)
 
-[node name="ExitButton" type="Button" parent="."]
-offset_left = 33.0
-offset_top = 434.0
-offset_right = 361.0
-offset_bottom = 484.0
-theme = SubResource("Theme_slw6y")
-icon = ExtResource("3_bja5k")
-flat = true
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -42.0
+offset_right = 160.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("3_bja5k")
+texture_pressed = ExtResource("6_21l0c")
 
-[node name="ExitButtonText" type="Button" parent="."]
-offset_left = 98.0
-offset_top = 454.0
-offset_right = 290.0
-offset_bottom = 485.0
-theme = ExtResource("5_kgyd6")
+[node name="Label" type="Label" parent="TextureButton"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -12.0
+offset_top = -20.0
+offset_right = 11.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_f2dam")
 text = "OK"
-flat = true
 
-[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
-[connection signal="pressed" from="ExitButtonText" to="." method="_on_exit_button_text_pressed"]
+[node name="TopScreen" type="Sprite2D" parent="."]
+position = Vector2(200, 119.5)
+scale = Vector2(1, 0.983539)
+texture = ExtResource("1_37vqw")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -168.5
+offset_top = 46.0
+offset_right = 168.5
+offset_bottom = 112.0
+grow_horizontal = 2
+theme = ExtResource("5_kgyd6")
+text = "Thank you for installing Nanica 3DX! 
+Before starting to use the system software, 
+please complete the following information. "
+horizontal_alignment = 1
+
+[node name="LargeLogo" type="Sprite2D" parent="."]
+position = Vector2(199, 159)
+scale = Vector2(0.520202, 0.520202)
+texture = ExtResource("8_cxehu")
