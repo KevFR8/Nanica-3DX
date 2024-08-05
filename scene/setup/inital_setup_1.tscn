@@ -29,36 +29,6 @@ offset_right = 361.0
 offset_bottom = 480.0
 color = Color(1, 0.909804, 0.729412, 1)
 
-[node name="TextureButton" type="TextureButton" parent="."]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -160.0
-offset_top = -42.0
-offset_right = 160.0
-grow_horizontal = 2
-grow_vertical = 0
-texture_normal = ExtResource("3_bja5k")
-texture_pressed = ExtResource("6_21l0c")
-
-[node name="Label" type="Label" parent="TextureButton"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -12.0
-offset_top = -20.0
-offset_right = 11.0
-grow_horizontal = 2
-grow_vertical = 0
-theme = ExtResource("5_f2dam")
-text = "OK"
-
 [node name="TopScreen" type="Sprite2D" parent="."]
 position = Vector2(200, 119.5)
 scale = Vector2(1, 0.983539)
@@ -84,3 +54,33 @@ horizontal_alignment = 1
 position = Vector2(199, 159)
 scale = Vector2(0.520202, 0.520202)
 texture = ExtResource("8_cxehu")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -162.0
+offset_top = -42.0
+offset_right = 158.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("3_bja5k")
+texture_pressed = ExtResource("6_21l0c")
+
+[node name="Label" type="Label" parent="TextureButton"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -12.0
+offset_top = -20.0
+offset_right = 11.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_f2dam")
+text = "OK"

@@ -15,6 +15,7 @@ grow_vertical = 2
 layout_mode = 1
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 40.0
 offset_top = 239.0
 offset_right = 361.0
