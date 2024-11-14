@@ -33,10 +33,10 @@ metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 296.0
-offset_top = 195.0
-offset_right = 383.0
-offset_bottom = 218.0
+offset_left = 298.0
+offset_top = 208.0
+offset_right = 385.0
+offset_bottom = 231.0
 theme = ExtResource("4_iaaif")
 theme_override_colors/font_color = Color(0.564706, 0.564706, 0.564706, 1)
 text = "Version 1.15"

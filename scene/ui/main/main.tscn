@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cfv3y62xgdjw0"]
+[gd_scene load_steps=8 format=3 uid="uid://cfv3y62xgdjw0"]
 
 [ext_resource type="PackedScene" uid="uid://dfrjfgwy0dyhc" path="res://asset/fx/transition/fade/transition_screen.tscn" id="1_sipsq"]
 [ext_resource type="PackedScene" uid="uid://i4ubkxstvme3" path="res://scene/ui/main/bottom.tscn" id="2_pwvht"]
 [ext_resource type="VideoStream" path="res://asset/texture/bg/main/layout/top/top_home_bg.ogg.ogv" id="3_mcyic"]
 [ext_resource type="PackedScene" uid="uid://ih0fx54e1f4f" path="res://scripts/scenes/layout/screen_border.tscn" id="3_tjjqg"]
+[ext_resource type="PackedScene" uid="uid://cp7dc4indffgk" path="res://scene/ui/icon/icon_app_button.tscn" id="4_r7pnr"]
 [ext_resource type="PackedScene" uid="uid://dhkcmvtirw0mf" path="res://scene/ui/popup/dialogbox/dialogbox.tscn" id="4_s6ned"]
 [ext_resource type="PackedScene" uid="uid://doakx2wyg7qql" path="res://scene/ui/icon/settings_app_button.tscn" id="6_q0ti3"]
 
@@ -27,9 +28,16 @@ stream = ExtResource("3_mcyic")
 autoplay = true
 loop = true
 
+[node name="IconAppButton" parent="." instance=ExtResource("4_r7pnr")]
+offset_left = 153.0
+offset_top = 380.0
+offset_right = 153.0
+offset_bottom = 380.0
+
 [node name="Bottom" parent="." instance=ExtResource("2_pwvht")]
 
 [node name="ScreenBorder" parent="." instance=ExtResource("3_tjjqg")]
+visible = false
 layout_mode = 1
 
 [node name="Dialogbox" parent="." instance=ExtResource("4_s6ned")]
